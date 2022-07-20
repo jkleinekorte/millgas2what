@@ -44,7 +44,7 @@ Contains all functions to create a flowsheet and to setup the GDP optimization p
 - Setup the linear optimization problem of the chemical industry
 - Allows to deactivate specific processes (useful to calculate different scenarios)
 
-**Matlab script millgas2what**
+**Matlab script millgas2what**  
 This matlab script solves a linearized version of the polygeneration model (just for computational effort reasons). For this purpose, we included several GDP solutions for different scenarios in the LCI excel.
 
 # Build and Test
