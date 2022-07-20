@@ -6,7 +6,7 @@ Responsible for this repository is johanna.kleinekorte@rwth-aachen.de.
 This repository provides all non-licensed parts of the code to reproduce the results published in the paper "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions" (DOI: to be added after submission)
 
 # Getting Started
-Set up an environment with the defined dependencies in environment.yaml. The packages „Pyomo“ und „Pyomo Solver“ must be installed. Installing licensed solvers such as Gurobi is optional.
+Set up an environment with the defined dependencies in environment.yml. The packages „Pyomo“ und „Pyomo Solver“ must be installed. Installing licensed solvers such as Gurobi is optional.
 
 The following descriptions of the files should help you to get started:
 
