@@ -22,9 +22,9 @@ As sub-solver, we used glpk and ipopt.
 
 **Script save_results**  
 Saves the results for the solved optimization (TCM or GDP). You can chose between different options: 
-•	Display results? Shows the results in the command line
-•	Save results as excel file? Stores the results as excel 
-•	Save superstructure object? stores the overall model as file
+- Display results? Shows the results in the command line
+- Save results as excel file? Stores the results as excel 
+- Save superstructure object? stores the overall model as file
 
 **Script repeated_solving_el_impact**  
 Solves TCM and GDP for varying electricity impacts (i.e., figure 5 in the paper). The results are not saved using save_results, as the file becomes to large. Instead, the values of the model variables are stored in a dictionary. As an example, we provide you the dictionary created for Figure 5 in the paper: 20200816_v19_pcest7_100_complete 
