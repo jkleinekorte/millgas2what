@@ -40,9 +40,9 @@ Unfortunately, we are not allowed to share the inventory file due to licensing r
 Contains all functions to create a flowsheet and to setup the GDP optimization problem.
 
 **Class LifeCycleInventory**  
-•	Reads the Life Cycle Inventory from the excel file 
-•	Setup the linear optimization problem of the chemical industry
-•	Allows to deactivate specific processes (useful to calculate different scenarios)
+- Reads the Life Cycle Inventory from the excel file 
+- Setup the linear optimization problem of the chemical industry
+- Allows to deactivate specific processes (useful to calculate different scenarios)
 
 # Build and Test
 Unfortunately, we have no tests or deployment pipeline yet. But feel free to change that.
