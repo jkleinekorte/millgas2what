@@ -30,8 +30,7 @@ Saves the results for the solved optimization (TCM or GDP). You can chose betwee
 Solves TCM and GDP for varying electricity impacts (i.e., figure 5 in the paper). The results are not saved using save_results, as the file becomes to large. Instead, the values of the model variables are stored in a dictionary. As an example, we provide you the dictionary created for Figure 5 in the paper: 20200816_v19_pcest7_100_complete 
 
 **Script plot**  
-Plots the results dictionary
-The results are casted into a list and nonsensical values are filtered (see documentation in the code).
+Plots the results dictionary. The results are casted into a list and nonsensical values are filtered (see documentation in the code).
 
 **Excel Life Cycle Inventory**  
 Unfortunately, we are not allowed to share the inventory file due to licensing reasons. If you can prove that you have a valid licence for the IHS data, please contact me. 
@@ -51,7 +50,9 @@ This matlab script solves a linearized version of the polygeneration model (just
 Unfortunately, we have no tests or deployment pipeline yet. But feel free to change that.
 
 # Contribute
-One interesting option to improve the code would be to use the IDAES package (https://github.com/IDAES) for the process units. 
+- One interesting option to improve the code would be to use the IDAES package (https://github.com/IDAES) for the process units. 
+- The model of the chemical industry could be extended including e.g., bio-based processes. 
+- The steel mills can included into the system boundary and production alternatives such as H2-based steel could be considered.
 
 
 
