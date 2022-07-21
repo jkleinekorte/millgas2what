@@ -1,6 +1,6 @@
 function [results] = millgas2what()
 %% MILLGAS2WHAT - function to optimize the supply chain of mill gas utilities
-% Inputs:       "Life Cycle Inventory_v11.xlsx" is load in the function
+% Inputs:       "Life Cycle Inventory_v22.xlsx" is load in the function
 % Outputs:      x, which is the scaling vector in LCA matrix notation
 %               h, impact of optimized system
 %               S, Matrix with all mass flows between processes
@@ -59,7 +59,7 @@ sankey1 = getDeltaSankey(S_benchmark-S_fossil, A);
 sankey2 = getDeltaSankey(S-S_fossil, A);
 sankey3 = getDeltaSankey(S-S_benchmark, A);
 
-%% plot contribution (Verbund exkludiert, da Sektoren gekoppelt)
+%% plot contribution (Verbund exkluded, as sectors are linked)
 contributions_fossil = calc_sectorContribution(A,A_ineq,Aeq,B,b_ineq,beq,Q,v,ub, toDelete_fossil);
 contributions_benchmark = calc_sectorContribution(A,A_ineq,Aeq,B,b_ineq,beq,Q,v,ub, toDelete_benchmark);
  
@@ -108,7 +108,7 @@ function [A,A_ineq,Aeq,B,b_ineq,beq,Q,v, process_legend] = getMatrices(filename)
 set_eq_constraints = [22,23,33,47,64,65,91:93,118,119];
 A       = xlsread (filename,1,'C16:MU137');     % A - Technology Matrix
 B       = xlsread (filename,1,'C139:MU139');    % B - Elementary Flow Matrix
-b_pos   = xlsread (filename,1,'B16:B137');      % inequality vector (values of production) - Überproduktion erlaubt
+b_pos   = xlsread (filename,1,'B16:B137');      % inequality vector (values of production) - Overproduction allowed
 Q       = [1];                                  % Characterization Matrix
 v       = xlsread(filename,3,'L2:L123')';        % end of life emissions
 Aeq = A(set_eq_constraints,:);
@@ -166,7 +166,7 @@ S=A.*x';
 end
 
 function [sankey] = getDeltaSankey(deltaS,Aeq)
-[~, col] = find(abs(deltaS)>1e2); col = unique(col);                        % ermittelt alle Prozesse, die nicht gleich bleiben und filtert numerische Schwnakungen raus
+[~, col] = find(abs(deltaS)>1e2); col = unique(col);                        % Determines all processes that do not remain the same and filters out numerical fluctuations
 
 a = sign(Aeq(:,col));
 b = sign(deltaS(:,col));
@@ -181,7 +181,7 @@ end
 col = col(tokeep);
 
 sankey = 0*Aeq;
-sankey(:,col) = deltaS(:,col);                                                  % löscht alles, was gleich bleibt und die avoided burden
+sankey(:,col) = deltaS(:,col);                                                  % deletes all, what remains similar + avoided burdens
 end
 
 function plot_dependency_electricityImpact(A,A_ineq,Aeq,B,b_ineq,beq,Q,v,ub, toDelete,toDelete_ideal, ...
@@ -202,7 +202,7 @@ counter = 0;
 x_all = [];
 deltax = [];
 controlResults = [];
-%beq(beq>0|beq<0) = 0;         % schaltet das Stahlwerk ab
+%beq(beq>0|beq<0) = 0;         % switch of the steel mills 
 
 for i=0:0.0005:0.15
     counter = counter + 1;
@@ -309,10 +309,6 @@ legend('Fossil chemical industry','Optimized chemical industry','Polygeneration'
 end
 
 function [results] = calc_MO(A,A_ineq,Aeq,B,b_ineq,beq,Q,v,ub, toDelete, toDelete_benchmark)
-% ggf To do für Zukunft: die Constraints für global demands an Strom und
-% Wärme (= Bedarf des Stahlwerks für globale Hüttengas-Menge) auch linear
-% mit der Hüttengas-menge variieren
-
 counter=0;
 
 upperBound = abs(beq(5)+beq(6));
