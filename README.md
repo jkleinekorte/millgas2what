@@ -1,7 +1,5 @@
 # millgas2what
-Responsible for this repository is johanna.kleinekorte@rwth-aachen.de. The repository contains the code and results published in the paper
-  Kleinekorte et al. (2022): "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions", Environmental Science & Technology, in print. 
-If you need access to the paper, please feel free to send me an email.
+Responsible for this repository is johanna.kleinekorte@rwth-aachen.de. If you need access to the paper, please feel free to send me an email.
 
 # Introduction 
 This repository provides all non-licensed parts of the code to reproduce the results published in the paper "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions" (DOI: to be added after submission)
@@ -55,7 +53,6 @@ Unfortunately, we have no tests or deployment pipeline yet. But feel free to cha
 - The model of the chemical industry could be extended including e.g., bio-based processes. 
 - The steel mills can included into the system boundary and production alternatives such as H2-based steel could be considered.
 
-
-
-
+# Reference  
+Kleinekorte et al. (2022): "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions", Environmental Science & Technology, in print. 
 
