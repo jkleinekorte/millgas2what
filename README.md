@@ -1,6 +1,7 @@
 # millgas2what
-
-Responsible for this repository is johanna.kleinekorte@rwth-aachen.de.
+Responsible for this repository is johanna.kleinekorte@rwth-aachen.de. The repository contains the code and results published in the paper
+  Kleinekorte et al. (2022): "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions", Environmental Science & Technology, in print. 
+If you need access to the paper, please feel free to send me an email.
 
 # Introduction 
 This repository provides all non-licensed parts of the code to reproduce the results published in the paper "What shall we do with steel mill off-gas: Polygeneration systems minimizing greenhouse gas emissions" (DOI: to be added after submission)
